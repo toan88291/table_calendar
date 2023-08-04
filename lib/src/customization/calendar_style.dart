@@ -139,6 +139,12 @@ class CalendarStyle {
   /// TextStyle for day cells that do not match any other styles.
   final TextStyle defaultTextStyle;
 
+  /// TextStyle for day cells that reminder
+  final TextStyle reminderTextStyle;
+
+  /// Decoration for day cells that do not match any other styles.
+  final Decoration reminderDecoration;
+
   /// Decoration for day cells that do not match any other styles.
   final Decoration defaultDecoration;
 
@@ -168,7 +174,7 @@ class CalendarStyle {
     this.cellPadding = const EdgeInsets.all(0),
     this.cellAlignment = Alignment.center,
     this.markersOffset = const PositionedOffset(),
-    this.rangeHighlightColor = const Color(0xFFBBDDFF),
+    this.rangeHighlightColor = const Color(0xFFE2E9F8),
     this.markerDecoration = const BoxDecoration(
       color: const Color(0xFF263238),
       shape: BoxShape.circle,
@@ -194,7 +200,7 @@ class CalendarStyle {
       fontSize: 16.0,
     ),
     this.rangeStartDecoration = const BoxDecoration(
-      color: const Color(0xFF6699FF),
+      color: const Color(0xFF52ACFF),
       shape: BoxShape.circle,
     ),
     this.rangeEndTextStyle = const TextStyle(
@@ -202,13 +208,13 @@ class CalendarStyle {
       fontSize: 16.0,
     ),
     this.rangeEndDecoration = const BoxDecoration(
-      color: const Color(0xFF6699FF),
+      color: const Color(0xFF409D04),
       shape: BoxShape.circle,
     ),
     this.withinRangeTextStyle = const TextStyle(),
-    this.withinRangeDecoration = const BoxDecoration(shape: BoxShape.circle),
+    this.withinRangeDecoration = const BoxDecoration(shape: BoxShape.circle,),
     this.outsideTextStyle = const TextStyle(color: const Color(0xFFAEAEAE)),
-    this.outsideDecoration = const BoxDecoration(shape: BoxShape.circle),
+    this.outsideDecoration = const BoxDecoration(color: Color(0xFFFAFAFA)),
     this.disabledTextStyle = const TextStyle(color: const Color(0xFFBFBFBF)),
     this.disabledDecoration = const BoxDecoration(shape: BoxShape.circle),
     this.holidayTextStyle = const TextStyle(color: const Color(0xFF5C6BC0)),
@@ -218,10 +224,15 @@ class CalendarStyle {
       ),
       shape: BoxShape.circle,
     ),
+    this.reminderTextStyle = const TextStyle(color: const Color(0xFFFAFAFA),
+      fontSize: 16.0,),
+    this.reminderDecoration = const BoxDecoration(shape: BoxShape.rectangle,
+      color: const Color(0xFFFF7A00),
+    ),
     this.weekendTextStyle = const TextStyle(color: const Color(0xFF5A5A5A)),
     this.weekendDecoration = const BoxDecoration(shape: BoxShape.circle),
     this.weekNumberTextStyle =
-        const TextStyle(fontSize: 12, color: const Color(0xFFBFBFBF)),
+    const TextStyle(fontSize: 12, color: const Color(0xFFBFBFBF)),
     this.defaultTextStyle = const TextStyle(),
     this.defaultDecoration = const BoxDecoration(shape: BoxShape.circle),
     this.rowDecoration = const BoxDecoration(),
