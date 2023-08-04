@@ -411,7 +411,6 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
       widget.onStartDaySelected?.call(day);
     }
     if (selectedValue == SelectedDayMode.end) {
-      if (day.isBefore(widget.rangeStartDay!)) {}
       widget.onEndDaySelected?.call(day);
     }
     if (selectedValue == SelectedDayMode.reminder) {
