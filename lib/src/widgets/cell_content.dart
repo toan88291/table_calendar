@@ -109,7 +109,7 @@ class CellContent extends StatelessWidget {
       cell = calendarBuilders.selectedBuilder?.call(context, day, focusedDay) ??
           AnimatedContainer(
             duration: Duration(seconds: 0),
-            margin: margin,
+            margin: EdgeInsets.all(6),
             padding: padding,
             decoration: BoxDecoration(
               border: Border.all(
