@@ -19,11 +19,11 @@ import 'widgets/cell_content.dart';
 /// Signature for `onDaySelected` callback. Contains the selected day and focused day.
 typedef OnDaySelected = void Function(DateTime selectedDay, DateTime focusedDay);
 
-typedef OnStartDaySelected = void Function(DateTime selectedDay);
+typedef OnStartDaySelected = void Function(DateTime? selectedDay);
 
-typedef OnEndDaySelected = void Function(DateTime selectedDay);
+typedef OnEndDaySelected = void Function(DateTime? selectedDay);
 
-typedef OnReminderDaySelected = void Function(DateTime selectedDay);
+typedef OnReminderDaySelected = void Function(DateTime? selectedDay);
 
 /// Signature for `onRangeSelected` callback.
 /// Contains start and end of the selected range, as well as currently focused day.
