@@ -416,7 +416,6 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
     if (selectedValue == SelectedDayMode.reminder) {
       widget.onReminderDaySelected?.call(day);
     }
-    _selectedDayMode?.value = SelectedDayMode.none;
   }
 
   void _onDayLongPressed(DateTime day) {
